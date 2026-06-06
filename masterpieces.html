@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signature Masterpieces | Karpagam Jewellers</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/masterpieces.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <div id="masterpieces-app">
+      <!-- Background Elements -->
+      <div class="bg-glow"></div>
+      <div class="particles" id="particles"></div>
+
+      <!-- Header Elements -->
+      <header class="mp-header">
+        <div class="mp-logo">
+          <a href="index.html" style="color: inherit; text-decoration: none;"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></a>
+        </div>
+        <div class="mp-overline">OUR LEGACY. YOUR HERITAGE.</div>
+        <a href="gold.html" class="mp-view-all">VIEW ALL MASTERPIECES <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      </header>
+
+      <!-- Main Title Area -->
+      <div class="mp-title-area">
+        <h1 class="mp-title">SIGNATURE<br>MASTERPIECES</h1>
+        <p class="mp-subtitle">The Finest Expressions of Craftsmanship</p>
+        <div class="title-ornament">
+          <svg width="40" height="15" viewBox="0 0 40 15" fill="none"><path d="M20 0L23 5L28 5L24 9L25 15L20 11L15 15L16 9L12 5L17 5L20 0Z" fill="#D4AF37" opacity="0.8"/><line x1="0" y1="7.5" x2="12" y2="7.5" stroke="#D4AF37" stroke-width="0.5"/><line x1="28" y1="7.5" x2="40" y2="7.5" stroke="#D4AF37" stroke-width="0.5"/></svg>
+        </div>
+      </div>
+
+      <!-- Side Navigation -->
+      <div class="side-nav left-nav">
+        <div class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg></div>
+        <div class="scroll-dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="scroll-text">SCROLL<br>TO EXPLORE</div>
+      </div>
+
+      <div class="side-nav right-nav">
+        <div class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg></div>
+      </div>
+
+      <!-- Pedestal Showcase Layout -->
+      <div class="showcase-container">
+        
+        <!-- Top Left -->
+        <div class="pedestal-group pos-top-left">
+          <img loading="lazy" src="/assets/signatures/image.png" alt="Eternal Jhumkas" class="item-img" style="transform: scale(1.3); margin-bottom: 70px;">
+          <div class="pedestal pedestal-md">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>ETERNAL JHUMKAS</h3>
+            <p>Heritage Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Bottom Left -->
+        <div class="pedestal-group pos-bottom-left">
+          <img loading="lazy" src="/assets/signatures/image copy.png" alt="Majestic Bloom Ring" class="item-img" style="transform: scale(1.5); margin-bottom: 80px;">
+          <div class="pedestal pedestal-sm">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>MAJESTIC BLOOM RING</h3>
+            <p>Diamond Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Center (The massive one) -->
+        <div class="pedestal-group pos-center">
+          <img loading="lazy" src="/assets/signatures/image copy 2.png" alt="Royal Temple Haram" class="item-img center-img">
+          <div class="pedestal pedestal-lg">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info info-center">
+            <h3>ROYAL TEMPLE HARAM</h3>
+            <p>Timeless Heritage Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Top Right -->
+        <div class="pedestal-group pos-top-right">
+          <img loading="lazy" src="/assets/signatures/image copy 3.png" alt="Devine Bangle" class="item-img" style="transform: scale(1.3); margin-bottom: 420px;">
+          <div class="pedestal pedestal-md">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>DEVINE BANGLE</h3>
+            <p>Heritage Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Bottom Right -->
+        <div class="pedestal-group pos-bottom-right">
+          <img loading="lazy" src="/assets/signatures/image copy 4.png" alt="Celestial Necklace" class="item-img" style="transform: scale(1.1); margin-bottom: 60px;">
+          <div class="pedestal pedestal-sm">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>CELESTIAL NECKLACE</h3>
+            <p>Diamond Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quote -->
+      <div class="mp-quote">
+        <span class="quote-mark">“</span>
+        True luxury is not created.<br>It is crafted over generations.
+        <span class="quote-mark">”</span>
+      </div>
+
+      <!-- Spotlight Detail Panel -->
+      <div class="spotlight-panel">
+        <div class="panel-left">
+          <div class="panel-img-bg">
+            <img loading="lazy" src="/assets/signatures/image copy 2.png" alt="Temple Haram Close Up">
+          </div>
+        </div>
+        
+        <div class="panel-center">
+          <h4 class="spotlight-label">SPOTLIGHT</h4>
+          <h2 class="spotlight-title">ROYAL TEMPLE HARAM</h2>
+          <p class="spotlight-col">Timeless Heritage Collection</p>
+          <p class="spotlight-desc">Inspired by the rich traditions of temple craftsmanship, this masterpiece is a celebration of divinity, heritage and eternal beauty.</p>
+          <a href="gold.html" class="explore-btn">EXPLORE DETAILS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></a>
+        </div>
+
+        <div class="panel-right">
+          <div class="specs-grid">
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+              <div class="spec-text">
+                <span class="lbl">CRAFTSMANSHIP</span>
+                <span class="val">120+ Hours</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="spec-text">
+                <span class="lbl">PURITY</span>
+                <span class="val">22K Gold (916)</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 14V3"/></svg></div>
+              <div class="spec-text">
+                <span class="lbl">WEIGHT</span>
+                <span class="val">148.350 gms</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+              <div class="spec-text">
+                <span class="lbl">INSPIRATION</span>
+                <span class="val">South Indian Temple Architecture</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <div class="spec-text">
+                <span class="lbl">GEMSTONES</span>
+                <span class="val">Ruby, Emerald, Uncut Diamonds</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></div>
+              <div class="spec-text">
+                <span class="lbl">COLLECTION</span>
+                <span class="val">Heritage Masterpieces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <script type="module" src="/src/masterpieces.js"></script>
+  </body>
+</html>

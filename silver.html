@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silver Collection | Karpagam Jewellers</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/silver.css">
+    <link rel="stylesheet" href="/src/nav-luxury.css">
+    <link rel="stylesheet" href="/src/floating-cta.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- Desktop Original Navigation -->
+    <nav class="silver-nav desktop-nav">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+        BACK TO COLLECTIONS
+      </a>
+      <div class="logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+    </nav>
+
+    <!-- Luxury Navigation -->
+    <header class="luxury-top-nav">
+      <a href="index.html" class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></a>
+      <button class="hamburger-menu" aria-label="Open Menu">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="fullscreen-menu-overlay">
+      <div class="menu-content">
+        <div class="menu-header">
+          <div class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+          <button class="close-menu" aria-label="Close Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="menu-links">
+          <div class="menu-category">COLLECTIONS</div>
+          <a href="gold.html" class="menu-item">Gold</a>
+          <a href="silver.html" class="menu-item">Silver</a>
+          <a href="diamond.html" class="menu-item">Diamond</a>
+          <a href="platinum.html" class="menu-item">Platinum</a>
+          
+          <div class="menu-category" style="margin-top: 2rem;">EXPERIENCE</div>
+          <a href="index.html#masterpieces-app" class="menu-item">Masterpieces</a>
+          <a href="index.html#creation-section" class="menu-item">Craftsmanship</a>
+          <a href="index.html#heritage-section" class="menu-item">Heritage</a>
+          
+          <div class="menu-category" style="margin-top: 2rem;">ASSISTANCE</div>
+          <a href="index.html#contact" class="menu-item">Contact</a>
+          <a href="index.html#visit" class="menu-item">Visit Showroom</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="silver-app">
+      <!-- Section 1: Hero -->
+      <section class="section-hero">
+        <div class="mist-container" id="hero-mist"></div>
+        <div class="moonlight-rays"></div>
+        <div class="halo-ring"></div>
+        
+        <div class="hero-content">
+          <div class="hero-label">KARPAGAM EXCLUSIVE</div>
+          <h1 class="hero-title">SILVER COLLECTION</h1>
+          <h2 class="hero-subtitle">The Purity of Elegance</h2>
+          <p class="hero-desc">Crafted with precision. Inspired by timeless sophistication.</p>
+          <button class="cta-explore" id="explore-btn" onclick="window.scrollBy({top: window.innerHeight, behavior: 'smooth'})">Explore Silver Masterpieces</button>
+        </div>
+
+        <div class="hero-centerpiece">
+          <img loading="lazy" src="/assets/collections/gold_hero.png" alt="Silver Masterpiece" class="hero-necklace silver-filter">
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span>SCROLL</span>
+        </div>
+      </section>
+
+      <!-- Section 2: Story -->
+      <section class="section-story" id="story-section">
+        <div class="story-container">
+          <div class="story-left">
+            <div class="story-image-wrapper">
+              <img loading="lazy" src="/assets/collections/gold_story.png" alt="Purity of Elegance" class="story-img silver-filter" style="filter: grayscale(100%) brightness(1.2);">
+              <div class="silver-pattern"></div>
+            </div>
+          </div>
+          <div class="story-right">
+            <h4 class="story-label">SERENITY</h4>
+            <h2 class="story-title">A Reflection of Purity</h2>
+            <div class="story-divider"></div>
+            <p class="story-text">Like moonlight caught in metal, our silver collection represents absolute clarity and grace. Away from the heavy warmth of gold, silver speaks the language of modern elegance, offering a sophisticated calm to the wearer.</p>
+            <p class="story-text">Every piece is a testament to minimalist beauty, combining traditional craftsmanship with contemporary, fluid designs.</p>
+            <button class="btn-outline" onclick="window.location.href='index.html#heritage-section'">READ OUR STORY</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Section 3: Silver Categories -->
+      <section class="section-categories" id="categories-section">
+        <div class="category-header">
+          <h4 class="story-label">MUSEUM EXHIBIT</h4>
+          <h2 class="section-title">The Silver Showroom</h2>
+        </div>
+        
+        <div class="categories-grid">
+          <!-- Necklace -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_necklaces.png" alt="Silver Necklaces" class="cat-img silver-filter">
+            <div class="cat-content">
+              <h3>Silver Necklaces</h3>
+              <p>Fluid elegance and grace</p>
+            </div>
+          </div>
+          <!-- Earrings -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_earrings.png" alt="Silver Earrings" class="cat-img silver-filter">
+            <div class="cat-content">
+              <h3>Silver Earrings</h3>
+              <p>Minimalist brilliance</p>
+            </div>
+          </div>
+          <!-- Rings -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_rings.png" alt="Silver Rings" class="cat-img silver-filter">
+            <div class="cat-content">
+              <h3>Silver Rings</h3>
+              <p>Statement moonlit bands</p>
+            </div>
+          </div>
+          <!-- Bangles -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_bangles.png" alt="Silver Bangles" class="cat-img silver-filter">
+            <div class="cat-content">
+              <h3>Silver Bangles</h3>
+              <p>Smooth, icy stacks</p>
+            </div>
+          </div>
+          <!-- Idols -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_masterpiece.png" alt="Silver Idols" class="cat-img silver-filter" style="transform: scale(0.8);">
+            <div class="cat-content">
+              <h3>Silver Idols</h3>
+              <p>Divine purity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Featured Silver Masterpiece -->
+      <section class="section-masterpiece" id="masterpiece-section">
+        <div class="masterpiece-content">
+          <div class="mp-left">
+            <h4 class="story-label">FEATURED MASTERPIECE</h4>
+            <h2 class="mp-title">The Moonlight Choker</h2>
+            <p class="mp-desc">A masterpiece crafted from pure 925 sterling silver, catching the light like a frozen waterfall. This choker represents the pinnacle of modern luxury jewelry.</p>
+          </div>
+          
+          <div class="mp-center">
+            <div class="mp-spotlight"></div>
+            <img loading="lazy" src="/assets/collections/gold_masterpiece.png" alt="Silver Masterpiece" class="mp-img silver-filter">
+          </div>
+          
+          <div class="mp-right">
+            <div class="specs-list">
+              <div class="spec-item">
+                <span class="spec-val">925</span>
+                <span class="spec-lbl">Sterling Silver</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">Cert</span>
+                <span class="spec-lbl">Purity Guaranteed</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">120h</span>
+                <span class="spec-lbl">Handcrafted</span>
+              </div>
+            </div>
+            <button class="btn-outline" onclick="window.open('https://wa.me/1234567890', '_blank')">INQUIRE PRICE</button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Section 6: Floating Preview Panel -->
+      <div id="preview-panel" class="preview-panel glass">
+        <div class="preview-img-box">
+          <img loading="lazy" src="" alt="Preview" id="pv-img" class="silver-filter">
+        </div>
+        <div class="preview-info">
+          <h3 id="pv-name">Product Name</h3>
+          <p id="pv-story">Story</p>
+          <div class="pv-specs">
+            <div><span class="lbl">Weight</span><span class="val" id="pv-weight">0g</span></div>
+            <div><span class="lbl">Purity</span><span class="val" id="pv-purity">925</span></div>
+          </div>
+          <div class="pv-price" id="pv-price">₹0</div>
+        </div>
+      </div>
+
+
+      <!-- Section 9: Customer Stories -->
+      <section class="section-experience">
+        <h2 class="section-title text-center">Voices of Elegance</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-card">
+            <p class="quote">"Their silver collection is breathtaking. It carries a modern sophistication while remaining deeply timeless. Absolutely in love."</p>
+            <div class="author">- Meera Nair</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Collection Transformation -->
+      <section class="section-transition" id="transition-section">
+        <div class="transition-particles" id="diamond-particles"></div>
+        <div class="transition-content">
+          <h2 class="transition-title">The Brilliance of Perfection...</h2>
+          <a href="diamond.html" class="cta-explore transition-btn" style="text-decoration: none;">DISCOVER DIAMOND COLLECTION</a>
+        </div>
+      </section>
+
+    </div>
+    
+    <script type="module" src="/src/silver.js"></script>
+    <script src="/src/nav-luxury.js"></script>
+
+    <!-- Floating Luxury CTA -->
+    <a href="index.html#visit" class="floating-luxury-cta" id="floating-cta">
+      <span class="cta-text">Book a Visit</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <script src="/src/floating-cta.js"></script>
+  </body>
+</html>

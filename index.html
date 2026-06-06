@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karpagam Jewellery - Cinematic Luxury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/masterpieces.css">
+  <link rel="stylesheet" href="/src/creation.css">
+  <link rel="stylesheet" href="/src/heritage.css">
+  <link rel="stylesheet" href="/src/footer.css">
+  <link rel="stylesheet" href="/src/nav-luxury.css">
+  <link rel="stylesheet" href="/src/floating-cta.css">
+  <style>
+    body {
+      visibility: hidden;
+      background-color: #03251d;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="scroll-container">
+      <!-- We will create scrollable space using CSS height on this container so ScrollTrigger has room to scroll -->
+    </div>
+
+    <!-- Fixed cinematic view -->
+    <div class="cinematic-stage">
+
+      <!-- Layer 1: Background -->
+      <div class="layer background-layer">
+        <div class="ambient-glow"></div>
+      </div>
+
+      <!-- Layer 2: Architecture -->
+      <div class="layer architecture-layer">
+        <div class="arch left-arch"></div>
+        <div class="arch right-arch"></div>
+      </div>
+
+      <!-- Layer 3-5: The Stage (Pedestal & Halo) -->
+      <div class="layer stage-layer">
+        <div class="fog"></div>
+      </div>
+
+      <!-- Layer 6: Products -->
+      <div class="layer product-layer">
+        <img src="/assets/signatures/image copy 5.png" alt="Hero Necklace" class="product-item active-product"
+          id="product-1">
+      </div>
+
+
+      <!-- Layer 7: Particles -->
+      <div class="layer particle-layer" id="particles"></div>
+
+      <!-- Layer 8: UI Layer -->
+      <div class="layer ui-layer">
+
+        <!-- Desktop Original Navigation -->
+        <nav class="navbar desktop-nav">
+          <div class="logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+          <ul class="nav-links">
+            <li><a href="#collections" class="nav-link">COLLECTIONS</a></li>
+            <li><a href="#masterpieces-app" class="nav-link">MASTERPIECES</a></li>
+            <li><a href="#heritage-section" class="nav-link">HERITAGE</a></li>
+          </ul>
+
+        </nav>
+
+        <!-- Top Header -->
+        <header class="luxury-top-nav">
+          <a href="/" class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></a>
+          <button class="hamburger-menu" aria-label="Open Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+        </header>
+
+        <!-- Fullscreen Menu Overlay -->
+        <div class="fullscreen-menu-overlay">
+          <div class="menu-content">
+            <div class="menu-header">
+              <div class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+              <button class="close-menu" aria-label="Close Menu">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <div class="menu-links">
+              <div class="menu-category">COLLECTIONS</div>
+              <a href="gold.html" class="menu-item">Gold</a>
+              <a href="silver.html" class="menu-item">Silver</a>
+              <a href="diamond.html" class="menu-item">Diamond</a>
+              <a href="platinum.html" class="menu-item">Platinum</a>
+              
+              <div class="menu-category" style="margin-top: 2rem;">EXPERIENCE</div>
+              <a href="#masterpieces-app" class="menu-item">Masterpieces</a>
+              <a href="#creation-section" class="menu-item">Craftsmanship</a>
+              <a href="#heritage-section" class="menu-item">Heritage</a>
+              
+              <div class="menu-category" style="margin-top: 2rem;">ASSISTANCE</div>
+              <a href="#contact" class="menu-item">Contact</a>
+              <a href="#visit" class="menu-item">Visit Showroom</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+
+          <!-- Left Column: Text & Features -->
+          <div class="left-col">
+            <h1 class="hero-headline">
+              TIMELESS BEAUTY,<br>
+              CRAFTED TO BE<br>
+              <span class="gold-text">CHERISHED.</span>
+            </h1>
+            <p class="hero-subheading">
+              Exquisite craftsmanship.<br>
+              Legacy in every detail.
+            </p>
+
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M6 3h12l4 6-10 12L2 9l4-6z" />
+                  </svg></div>
+                <div class="feature-text">
+                  <h4>PREMIUM QUALITY</h4>
+                  <p>Finest craftsmanship in every piece.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 22C12 22 20 18 20 12C20 6 12 2 12 2C12 2 4 6 4 12C4 18 12 22 12 22Z" />
+                  </svg></div>
+                <div class="feature-text">
+                  <h4>TRADITIONAL ELEGANCE</h4>
+                  <p>Inspired by timeless heritage designs.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg></div>
+                <div class="feature-text">
+                  <h4>PURE & AUTHENTIC</h4>
+                  <p>Certified purity. Trusted jewellery.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="8" width="18" height="14" rx="2" />
+                    <path d="M12 8v14M8 8V5c0-1.7 1.3-3 3-3s3 1.3 3 3v3" />
+                  </svg></div>
+                <div class="feature-text">
+                  <h4>CERTIFIED PURITY</h4>
+                  <p>Assured authenticity you can trust.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Price & CTA -->
+          <div class="right-col">
+            <div class="price-section">
+              <span class="price-label" style="display: none;">STARTING AT</span>
+              <span class="price-value" style="display: none;"></span>
+              <div class="btn-wrapper">
+                <button class="btn" onclick="document.querySelector('.collections-section').scrollIntoView({behavior: 'smooth'})">
+                  <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                  <div class="txt-wrapper">
+                    <span class="txt-1">
+                      <span class="btn-letter">E</span>
+                      <span class="btn-letter">X</span>
+                      <span class="btn-letter">P</span>
+                      <span class="btn-letter">L</span>
+                      <span class="btn-letter">O</span>
+                      <span class="btn-letter">R</span>
+                      <span class="btn-letter">E</span>
+                    </span>
+                    <span class="txt-2">
+                      <span class="btn-letter">E</span>
+                      <span class="btn-letter">X</span>
+                      <span class="btn-letter">P</span>
+                      <span class="btn-letter">L</span>
+                      <span class="btn-letter">O</span>
+                      <span class="btn-letter">R</span>
+                      <span class="btn-letter">E</span>
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <!-- New Collections Section -->
+    <section id="collections" class="collections-section">
+      <div class="collections-header">
+        <div class="collections-title-small">OUR COLLECTIONS</div>
+        <h2 class="collections-title-main">Four Elements. Timeless Beauty.</h2>
+        <div class="collections-title-sub">DISCOVER THE PERFECT EXPRESSION OF LUXURY IN EVERY MATERIAL.</div>
+      </div>
+
+      <div class="collections-grid-wrapper">
+        <div class="emblem">K</div>
+        <div class="collections-grid">
+
+          <!-- Gold Card -->
+          <div class="collection-card" onclick="window.location.href='gold.html'" style="cursor: pointer;">
+            <img loading="lazy" src="/assets/collections/gold.png" alt="Gold Necklace" class="card-bg-image">
+            <div class="card-overlay"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2L15 8H9L12 2Z" fill="currentColor" />
+                <path d="M12 22L9 16H15L12 22Z" fill="currentColor" />
+                <path d="M2 12L8 9V15L2 12Z" fill="currentColor" />
+                <path d="M22 12L16 15V9L22 12Z" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="card-title">GOLD</h3>
+            <p class="card-sub">THE RADIANCE<br>OF TRADITION</p>
+            <a href="gold.html" class="card-btn" style="text-decoration: none;">EXPLORE COLLECTION <svg
+                viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none">
+                <path d="M9 18l6-6-6-6" />
+              </svg></a>
+          </div>
+
+          <!-- Silver Card -->
+          <div class="collection-card" onclick="window.location.href='silver.html'" style="cursor: pointer;">
+            <img loading="lazy" src="/assets/collections/silver.png" alt="Silver Ganesha" class="card-bg-image">
+            <div class="card-overlay"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none" />
+                <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <h3 class="card-title">SILVER</h3>
+            <p class="card-sub">THE PURITY<br>OF ELEGANCE</p>
+            <a href="silver.html" class="card-btn" style="text-decoration: none;">EXPLORE COLLECTION <svg
+                viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none">
+                <path d="M9 18l6-6-6-6" />
+              </svg></a>
+          </div>
+
+          <!-- Diamond Card -->
+          <div class="collection-card" onclick="window.location.href='diamond.html'" style="cursor: pointer;">
+            <img loading="lazy" src="/assets/collections/diamond.png" alt="Diamond Necklace" class="card-bg-image">
+            <div class="card-overlay"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <polygon points="12 2 22 8 12 22 2 8 12 2" stroke="currentColor" stroke-width="2" fill="none" />
+                <line x1="2" y1="8" x2="22" y2="8" stroke="currentColor" stroke-width="2" />
+                <line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <h3 class="card-title">DIAMOND</h3>
+            <p class="card-sub">THE BRILLIANCE<br>OF PERFECTION</p>
+            <a href="diamond.html" class="card-btn" style="text-decoration: none;">EXPLORE COLLECTION <svg
+                viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none">
+                <path d="M9 18l6-6-6-6" />
+              </svg></a>
+          </div>
+
+          <!-- Platinum Card -->
+          <div class="collection-card" onclick="window.location.href='platinum.html'" style="cursor: pointer;">
+            <img loading="lazy" src="/assets/collections/platinum.png" alt="Platinum Ring" class="card-bg-image">
+            <div class="card-overlay"></div>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" /><text x="12" y="16"
+                  text-anchor="middle" fill="currentColor" font-size="12" font-family="sans-serif">P</text>
+              </svg>
+            </div>
+            <h3 class="card-title">PLATINUM</h3>
+            <p class="card-sub">THE RARITY<br>OF ETERNITY</p>
+            <a href="platinum.html" class="card-btn" style="text-decoration: none;">EXPLORE COLLECTION <svg
+                viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none">
+                <path d="M9 18l6-6-6-6" />
+              </svg></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="trust-bar">
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg></div>
+          <div class="trust-text">
+            <h4>CERTIFIED PURITY</h4>
+            <p>Assured quality</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+            </svg></div>
+          <div class="trust-text">
+            <h4>EXPERT CRAFTSMANSHIP</h4>
+            <p>Made with passion</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="12" cy="8" r="7" />
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+            </svg></div>
+          <div class="trust-text">
+            <h4>HALLMARKED JEWELLERY</h4>
+            <p>925 | 916 | 950</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg></div>
+          <div class="trust-text">
+            <h4>CUSTOM DESIGNS</h4>
+            <p>Personalized for you</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.92-10.44l5.58 5.58" />
+            </svg></div>
+          <div class="trust-text">
+            <h4>LIFETIME EXCHANGE</h4>
+            <p>Value for your trust</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg></div>
+          <div class="trust-text">
+            <h4>SECURE PURCHASE</h4>
+            <p>100% secured</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Masterpieces Section Appended from masterpieces.html -->
+    <div id="masterpieces-app">
+      <!-- Background Elements -->
+      <div class="bg-glow"></div>
+      <div class="particles" id="particles"></div>
+
+      <!-- Header Elements -->
+      <header class="mp-header">
+        <div class="mp-logo">
+          <a href="index.html" style="color: inherit; text-decoration: none;"><img src="/webassets/image.png" alt="K" style="height: 60px; width: auto;"></a>
+        </div>
+        <div class="mp-overline">OUR LEGACY. YOUR HERITAGE.</div>
+        <a href="gold.html" class="mp-view-all">VIEW ALL MASTERPIECES <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg></a>
+      </header>
+
+      <!-- Main Title Area -->
+      <div class="mp-title-area">
+        <h1 class="mp-title">SIGNATURE<br>MASTERPIECES</h1>
+        <p class="mp-subtitle">The Finest Expressions of Craftsmanship</p>
+        <div class="title-ornament">
+          <svg width="40" height="15" viewBox="0 0 40 15" fill="none">
+            <path d="M20 0L23 5L28 5L24 9L25 15L20 11L15 15L16 9L12 5L17 5L20 0Z" fill="#D4AF37" opacity="0.8" />
+            <line x1="0" y1="7.5" x2="12" y2="7.5" stroke="#D4AF37" stroke-width="0.5" />
+            <line x1="28" y1="7.5" x2="40" y2="7.5" stroke="#D4AF37" stroke-width="0.5" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Side Navigation -->
+      <div class="side-nav left-nav">
+        <div class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M15 18l-6-6 6-6" />
+          </svg></div>
+        <div class="scroll-dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="scroll-text">SCROLL<br>TO EXPLORE</div>
+      </div>
+
+      <div class="side-nav right-nav">
+        <div class="nav-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M9 18l6-6-6-6" />
+          </svg></div>
+      </div>
+
+      <!-- Pedestal Showcase Layout -->
+      <div class="showcase-container">
+
+        <!-- Top Left -->
+        <div class="pedestal-group pos-top-left">
+          <img src="/assets/signatures/image.png" alt="Eternal Jhumkas" class="item-img"
+            style="transform: scale(1.3); margin-bottom: 70px;">
+          <div class="pedestal pedestal-md">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>ETERNAL JHUMKAS</h3>
+            <p>Heritage Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Bottom Left -->
+        <div class="pedestal-group pos-bottom-left">
+          <img src="/assets/signatures/image copy.png" alt="Majestic Bloom Ring" class="item-img"
+            style="transform: scale(1.5); margin-bottom: 80px;">
+          <div class="pedestal pedestal-sm">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>MAJESTIC BLOOM RING</h3>
+            <p>Diamond Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Center (The massive one) -->
+        <div class="pedestal-group pos-center">
+          <img loading="lazy" src="/assets/signatures/image copy 2.png" alt="Royal Temple Haram" class="item-img center-img">
+          <div class="pedestal pedestal-lg">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info info-center">
+            <h3>ROYAL TEMPLE HARAM</h3>
+            <p>Timeless Heritage Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Top Right -->
+        <div class="pedestal-group pos-top-right">
+          <img src="/assets/signatures/image copy 3.png" alt="Devine Bangle" class="item-img"
+            style="transform: scale(1.3); margin-bottom: 420px;">
+          <div class="pedestal pedestal-md">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>DEVINE BANGLE</h3>
+            <p>Heritage Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+        <!-- Bottom Right -->
+        <div class="pedestal-group pos-bottom-right">
+          <img src="/assets/signatures/image copy 4.png" alt="Celestial Necklace" class="item-img"
+            style="transform: scale(1.1); margin-bottom: 60px;">
+          <div class="pedestal pedestal-sm">
+            <div class="pedestal-top"></div>
+            <div class="pedestal-body"></div>
+          </div>
+          <div class="item-info">
+            <h3>CELESTIAL NECKLACE</h3>
+            <p>Diamond Collection</p>
+            <div class="btn-plus">+</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quote -->
+      <div class="mp-quote">
+        <span class="quote-mark">“</span>
+        True luxury is not created.<br>It is crafted over generations.
+        <span class="quote-mark">”</span>
+      </div>
+
+      <!-- Spotlight Detail Panel -->
+      <div class="spotlight-panel">
+        <div class="panel-left">
+          <div class="panel-img-bg">
+            <img loading="lazy" src="/assets/signatures/image copy 2.png" alt="Temple Haram Close Up">
+          </div>
+        </div>
+
+        <div class="panel-center">
+          <h4 class="spotlight-label">SPOTLIGHT</h4>
+          <h2 class="spotlight-title">ROYAL TEMPLE HARAM</h2>
+          <p class="spotlight-col">Timeless Heritage Collection</p>
+          <p class="spotlight-desc">Inspired by the rich traditions of temple craftsmanship, this masterpiece is a
+            celebration of divinity, heritage and eternal beauty.</p>
+          <a href="gold.html" class="explore-btn">EXPLORE DETAILS <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M9 18l6-6-6-6" />
+            </svg></a>
+        </div>
+
+        <div class="panel-right">
+          <div class="specs-grid">
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg></div>
+              <div class="spec-text">
+                <span class="lbl">CRAFTSMANSHIP</span>
+                <span class="val">120+ Hours</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg></div>
+              <div class="spec-text">
+                <span class="lbl">PURITY</span>
+                <span class="val">22K Gold (916)</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 14V3" />
+                </svg></div>
+              <div class="spec-text">
+                <span class="lbl">WEIGHT</span>
+                <span class="val">148.350 gms</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg></div>
+              <div class="spec-text">
+                <span class="lbl">INSPIRATION</span>
+                <span class="val">South Indian Temple Architecture</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg></div>
+              <div class="spec-text">
+                <span class="lbl">GEMSTONES</span>
+                <span class="val">Ruby, Emerald, Uncut Diamonds</span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                  <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                </svg></div>
+              <div class="spec-text">
+                <span class="lbl">COLLECTION</span>
+                <span class="val">Heritage Masterpieces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- THE ART OF CREATION SECTION -->
+  <section id="creation-section" class="creation-section">
+    <div class="creation-header">
+      <div class="creation-eyebrow">THE ART OF CREATION</div>
+      <h2 class="creation-title">Every masterpiece begins with<br>a single stroke of <span>craftsmanship.</span></h2>
+      <p class="creation-subtitle">From timeless traditions to modern precision,<br>our artisans pour their soul into
+        every creation.</p>
+    </div>
+
+    <div class="process-grid">
+      <!-- Step 1 -->
+      <div class="process-card">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+            <path d="M2 2l7.586 7.586" />
+            <circle cx="11" cy="11" r="2" />
+          </svg>
+        </div>
+        <div class="process-img-wrap">
+          <img loading="lazy" src="/assets/creation/art_sketch.png" alt="Inspiration Sketch">
+        </div>
+        <h3 class="process-title">1. THE INSPIRATION</h3>
+        <p class="process-desc">Hand-drawn sketches inspired by heritage and divinity.</p>
+      </div>
+
+      <div class="process-arrow">></div>
+
+      <!-- Step 2 -->
+      <div class="process-card">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+          </svg>
+        </div>
+        <div class="process-img-wrap">
+          <img loading="lazy" src="/assets/creation/art_craft.png" alt="Craftsmanship">
+        </div>
+        <h3 class="process-title">2. THE CRAFTSMANSHIP</h3>
+        <p class="process-desc">Generations of artisans meticulously handcraft every detail.</p>
+      </div>
+
+      <div class="process-arrow">></div>
+
+      <!-- Step 3 -->
+      <div class="process-card">
+        <div class="process-icon">
+          <svg viewBox="0 0 24 24">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+        </div>
+        <div class="process-img-wrap">
+          <img loading="lazy" src="/assets/creation/art_perfect.png" alt="Perfection">
+        </div>
+        <h3 class="process-title">3. THE PERFECTION</h3>
+        <p class="process-desc">Each gemstone is hand-set to perfection with utmost care.</p>
+      </div>
+    </div>
+
+    </div>
+
+  </section>
+
+  <!-- HERITAGE & LEGACY SECTIONS -->
+  <section id="heritage-section" class="heritage-container">
+
+    <!-- BLOCK 1: HERITAGE SHOWCASE -->
+    <div class="heritage-block h-showcase">
+      <div class="h-showcase-grid">
+
+        <div class="h-showcase-left">
+          <div class="h-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            OUR HERITAGE
+          </div>
+          <h2 class="h-title">A Legacy Crafted<br>Over <span>Generations.</span></h2>
+          <p class="h-desc">Rooted in centuries of traditional artistry, our journey is a tribute to the timeless legacy
+            of temple jewellery. We preserve the old. We perfect the new.</p>
+          <a href="gold.html" class="btn-outline-gold">DISCOVER OUR STORY ></a>
+        </div>
+
+        <div class="h-showcase-center">
+          <img loading="lazy" src="/assets/signatures/image copy 5.png" alt="Heritage Necklace">
+        </div>
+
+        <div class="h-showcase-right">
+          <div class="h-stat-card">
+            <div class="h-stat-icon"><svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              </svg></div>
+            <div class="h-stat-info">
+              <h4>125+</h4>
+              <p>YEARS OF LEGACY<br>Crafting heritage since 1898</p>
+            </div>
+          </div>
+          <div class="h-stat-card">
+            <div class="h-stat-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="7" r="4" />
+                <path d="M12 14c-4.42 0-8 3.58-8 8h16c0-4.42-3.58-8-8-8z" />
+              </svg></div>
+            <div class="h-stat-info">
+              <h4>500+</h4>
+              <p>SKILLED ARTISANS<br>Masters of traditional craftsmanship</p>
+            </div>
+          </div>
+          <div class="h-stat-card">
+            <div class="h-stat-icon"><svg viewBox="0 0 24 24">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg></div>
+            <div class="h-stat-info">
+              <h4>50,000+</h4>
+              <p>MASTERPIECES<br>Cherished by generations worldwide</p>
+            </div>
+          </div>
+          <div class="h-stat-card">
+            <div class="h-stat-icon"><svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></div>
+            <div class="h-stat-info">
+              <h4>100%</h4>
+              <p>ETHICAL & SUSTAINABLE<br>Responsible sourcing, conscious creations</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BLOCK 2: JOURNEY TIMELINE -->
+    <div class="heritage-block h-journey">
+      <div class="h-eyebrow">OUR JOURNEY</div>
+      <h2 class="h-title">Timeless Traditions. <span>Eternal Values.</span></h2>
+
+      <div class="h-timeline-container">
+        <div class="h-timeline-line"></div>
+        <div class="h-timeline-grid">
+          <div class="h-timeline-stop">
+            <div class="h-tl-icon"><svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              </svg></div>
+            <h4 class="h-tl-year">1898</h4>
+            <p class="h-tl-title">THE BEGINNING</p>
+            <p class="h-tl-desc">A small atelier with a big dream of preserving temple artistry.</p>
+          </div>
+          <div class="h-timeline-stop">
+            <div class="h-tl-icon"><svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg></div>
+            <h4 class="h-tl-year">1940s</h4>
+            <p class="h-tl-title">ROOTS STRONGER</p>
+            <p class="h-tl-desc">Passed down knowledge, preserving age-old techniques.</p>
+          </div>
+          <div class="h-timeline-stop">
+            <div class="h-tl-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+              </svg></div>
+            <h4 class="h-tl-year">1970s</h4>
+            <p class="h-tl-title">CRAFT EVOLVES</p>
+            <p class="h-tl-desc">Blending tradition with innovation. Expanding our creations.</p>
+          </div>
+          <div class="h-timeline-stop">
+            <div class="h-tl-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg></div>
+            <h4 class="h-tl-year">2000s</h4>
+            <p class="h-tl-title">BEYOND BORDERS</p>
+            <p class="h-tl-desc">Our masterpieces find a place in the hearts around the world.</p>
+          </div>
+          <div class="h-timeline-stop">
+            <div class="h-tl-icon" style="font-family:var(--font-luxury); font-size:1.2rem; color:var(--color-gold);">K
+            </div>
+            <h4 class="h-tl-year">TODAY & BEYOND</h4>
+            <p class="h-tl-desc" style="margin-top:20px;">Continuing the legacy with the same passion, for generations
+              to come.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOCK 3: TESTIMONIALS -->
+    <div class="heritage-block h-testimonials">
+      <div class="h-test-grid">
+
+        <div class="h-test-left">
+          <div class="h-eyebrow">TRUSTED BY GENERATIONS</div>
+          <h2 class="h-title">Loved, Treasured, <span>Passed On.</span></h2>
+
+          <div class="test-cards-container">
+            <div class="test-card">
+              <div class="test-card-top">
+                <div class="test-profile"><img loading="lazy" src="/assets/heritage/test_profile_1.png" alt="Customer"></div>
+                <div class="test-quote-icon">"</div>
+              </div>
+              <p class="test-text">The craftsmanship is beyond exceptional. Every piece feels like a heritage passed
+                down with love.</p>
+              <div class="test-author">
+                <span class="test-name">- Ananya R.</span>
+                <span class="test-stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="test-card">
+              <div class="test-card-top">
+                <div class="test-profile"><img loading="lazy" src="/assets/heritage/test_profile_2.png" alt="Customer"></div>
+                <div class="test-quote-icon">"</div>
+              </div>
+              <p class="test-text">Their temple jewellery is not just beautiful, it connects you to tradition and
+                divinity.</p>
+              <div class="test-author">
+                <span class="test-name">- Meenakshi S.</span>
+                <span class="test-stars">★★★★★</span>
+              </div>
+            </div>
+            <div class="test-card">
+              <div class="test-card-top">
+                <div class="test-profile"><img loading="lazy" src="/assets/heritage/test_profile_3.png" alt="Customer"></div>
+                <div class="test-quote-icon">"</div>
+              </div>
+              <p class="test-text">Pure gold, authentic designs and unmatched quality. Truly a brand you can trust.</p>
+              <div class="test-author">
+                <span class="test-name">- Raghav V.</span>
+                <span class="test-stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-dots">
+            <div class="test-dot active"></div>
+            <div class="test-dot"></div>
+            <div class="test-dot"></div>
+          </div>
+        </div>
+
+        <div class="h-test-right">
+          <img loading="lazy" src="/assets/heritage/pendant_hand.png" alt="Hand holding pendant">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BLOCK 4: TRUST BADGES -->
+    <div class="h-trust-bar">
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+        <div class="trust-text">
+          <h5>GENERATIONS OF TRUST</h5>
+          <p>More than a century of unwavering trust.</p>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24">
+          <polygon
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+        <div class="trust-text">
+          <h5>EXCEPTIONAL QUALITY</h5>
+          <p>Only the finest materials, crafted to perfection.</p>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+        <div class="trust-text">
+          <h5>EMOTIONS & MEMORIES</h5>
+          <p>We don't just create jewellery, we create legacies.</p>
+        </div>
+      </div>
+      <div class="trust-badge">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="7" />
+          <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+        </svg>
+        <div class="trust-text">
+          <h5>AWARD WINNING</h5>
+          <p>Recognised for excellence in craftsmanship.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-newsletter">
+      <h3>Join Our Legacy</h3>
+      <p>Subscribe to receive updates on new masterpieces, exclusive collections, and heritage stories.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-col">
+        <a href="index.html" class="footer-logo"><img src="/webassets/image.png" alt="Karpagam" style="height: 80px; width: auto;"></a>
+        <p>Preserving the art of traditional temple jewellery for over a century. Every piece is a testament to divine
+          craftsmanship.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#app">Home</a></li>
+          <li><a href="#masterpieces-app">Signature Masterpieces</a></li>
+          <li><a href="#creation-section">The Art of Creation</a></li>
+          <li><a href="#heritage-section">Our Journey & Heritage</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact-info">
+        <h4 class="footer-heading">Contact Us</h4>
+        <p>
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          123 Heritage Lane, Temple Street, Coimbatore, India
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          +91 98765 43210
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          legacy@karpagamjewellers.com
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">&copy; 2026 Karpagam Jewellery. All Rights Reserved.</div>
+      <div class="social-links">
+        <a href="https://instagram.com" aria-label="Instagram" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+        <a href="https://facebook.com" aria-label="Facebook" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg>
+        </a>
+        <a href="https://twitter.com" aria-label="Twitter" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Floating Socials -->
+    <div class="floating-socials">
+      <a href="https://wa.me/1234567890" class="float-btn whatsapp" aria-label="WhatsApp" target="_blank">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.8 5.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      </a>
+      <a href="https://instagram.com" class="float-btn instagram" aria-label="Instagram" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      </a>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/masterpieces.js"></script>
+  <script type="module" src="/src/creation.js"></script>
+  <script type="module" src="/src/heritage.js"></script>
+  <script type="module" src="/src/footer.js"></script>
+  <script src="/src/nav-luxury.js"></script>
+
+  <!-- Floating Luxury CTA -->
+  <a href="#visit" class="floating-luxury-cta" id="floating-cta">
+    <span class="cta-text">Book a Visit</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+  <script src="/src/floating-cta.js"></script>
+</body>
+
+</html>

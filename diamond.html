@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Collection | Karpagam Jewellers</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/diamond.css">
+    <link rel="stylesheet" href="/src/nav-luxury.css">
+    <link rel="stylesheet" href="/src/floating-cta.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- Desktop Original Navigation -->
+    <nav class="diamond-nav desktop-nav">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+        BACK TO COLLECTIONS
+      </a>
+      <div class="logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+    </nav>
+
+    <!-- Luxury Navigation -->
+    <header class="luxury-top-nav">
+      <a href="index.html" class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></a>
+      <button class="hamburger-menu" aria-label="Open Menu">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="fullscreen-menu-overlay">
+      <div class="menu-content">
+        <div class="menu-header">
+          <div class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+          <button class="close-menu" aria-label="Close Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="menu-links">
+          <div class="menu-category">COLLECTIONS</div>
+          <a href="gold.html" class="menu-item">Gold</a>
+          <a href="silver.html" class="menu-item">Silver</a>
+          <a href="diamond.html" class="menu-item">Diamond</a>
+          <a href="platinum.html" class="menu-item">Platinum</a>
+          
+          <div class="menu-category" style="margin-top: 2rem;">EXPERIENCE</div>
+          <a href="index.html#masterpieces-app" class="menu-item">Masterpieces</a>
+          <a href="index.html#creation-section" class="menu-item">Craftsmanship</a>
+          <a href="index.html#heritage-section" class="menu-item">Heritage</a>
+          
+          <div class="menu-category" style="margin-top: 2rem;">ASSISTANCE</div>
+          <a href="index.html#contact" class="menu-item">Contact</a>
+          <a href="index.html#visit" class="menu-item">Visit Showroom</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="diamond-app">
+      <!-- Section 1: Hero -->
+      <section class="section-hero">
+        <div class="starfield" id="hero-stars"></div>
+        <div class="prism-rays"></div>
+        <div class="halo-ring"></div>
+        
+        <div class="hero-content">
+          <div class="hero-label">KARPAGAM SIGNATURE</div>
+          <h1 class="hero-title">DIAMOND COLLECTION</h1>
+          <h2 class="hero-subtitle">The Brilliance of Perfection</h2>
+          <p class="hero-desc">Crafted from stars. Unmatched clarity and timeless luxury.</p>
+          <button class="cta-explore" id="explore-btn" onclick="window.scrollBy({top: window.innerHeight, behavior: 'smooth'})">Explore Diamond Masterpieces</button>
+        </div>
+
+        <div class="hero-centerpiece">
+          <img loading="lazy" src="/assets/collections/gold_hero.png" alt="Diamond Masterpiece" class="hero-necklace diamond-filter">
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span>SCROLL</span>
+        </div>
+      </section>
+
+      <!-- Section 2: Story -->
+      <section class="section-story" id="story-section">
+        <div class="story-container">
+          <div class="story-left">
+            <div class="story-image-wrapper">
+              <img loading="lazy" src="/assets/collections/gold_story.png" alt="Brilliance" class="story-img diamond-filter" style="filter: grayscale(100%) brightness(1.4) contrast(1.3);">
+              <div class="diamond-pattern"></div>
+            </div>
+          </div>
+          <div class="story-right">
+            <h4 class="story-label">CRYSTAL CLARITY</h4>
+            <h2 class="story-title">A Symphony of Light</h2>
+            <div class="story-divider"></div>
+            <p class="story-text">Diamonds are nature's ultimate triumph, and our collection showcases the rarest and most brilliant gems. Set against deep midnight hues, every facet is cut to maximize fire and scintillation.</p>
+            <p class="story-text">This is not just jewelry. It is an enduring legacy of perfection, designed for the grandest moments of your life.</p>
+            <button class="btn-outline" onclick="window.location.href='index.html#heritage-section'">READ OUR STORY</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Section 3: Diamond Categories -->
+      <section class="section-categories" id="categories-section">
+        <div class="category-header">
+          <h4 class="story-label">PRISMATIC EXHIBIT</h4>
+          <h2 class="section-title">The Crystal Vault</h2>
+        </div>
+        
+        <div class="categories-grid">
+          <!-- Solitaires -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_rings.png" alt="Solitaires" class="cat-img diamond-filter">
+            <div class="cat-content">
+              <h3>Solitaires</h3>
+              <p>Singular perfection</p>
+            </div>
+          </div>
+          <!-- Necklaces -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_necklaces.png" alt="Necklaces" class="cat-img diamond-filter">
+            <div class="cat-content">
+              <h3>Diamond Necklaces</h3>
+              <p>Cascading brilliance</p>
+            </div>
+          </div>
+          <!-- Earrings -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_earrings.png" alt="Earrings" class="cat-img diamond-filter">
+            <div class="cat-content">
+              <h3>Diamond Earrings</h3>
+              <p>Starlight frames</p>
+            </div>
+          </div>
+          <!-- Bracelets -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_bangles.png" alt="Bracelets" class="cat-img diamond-filter">
+            <div class="cat-content">
+              <h3>Tennis Bracelets</h3>
+              <p>Unbroken scintillation</p>
+            </div>
+          </div>
+          <!-- Bridal -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_masterpiece.png" alt="Bridal Sets" class="cat-img diamond-filter" style="transform: translateX(-50%) scale(0.8);">
+            <div class="cat-content">
+              <h3>Bridal Sets</h3>
+              <p>Eternal commitments</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Featured Diamond Masterpiece -->
+      <section class="section-masterpiece" id="masterpiece-section">
+        <div class="masterpiece-content">
+          <div class="mp-left">
+            <h4 class="story-label">FEATURED MASTERPIECE</h4>
+            <h2 class="mp-title">The Star of Karpagam</h2>
+            <p class="mp-desc">An extraordinary creation featuring a constellation of VVS-clarity diamonds set in platinum. It commands attention with its blinding brilliance.</p>
+          </div>
+          
+          <div class="mp-center">
+            <div class="mp-spotlight"></div>
+            <img loading="lazy" src="/assets/collections/gold_masterpiece.png" alt="Diamond Masterpiece" class="mp-img diamond-filter">
+          </div>
+          
+          <div class="mp-right">
+            <div class="specs-list">
+              <div class="spec-item">
+                <span class="spec-val">VVS1</span>
+                <span class="spec-lbl">Clarity Grade</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">D-E</span>
+                <span class="spec-lbl">Color Grade</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">Ideal</span>
+                <span class="spec-lbl">Cut Symmetry</span>
+              </div>
+            </div>
+            <button class="btn-outline" onclick="window.open('https://wa.me/1234567890', '_blank')">INQUIRE PRICE</button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Section 6: Floating Preview Panel -->
+      <div id="preview-panel" class="preview-panel glass">
+        <div class="preview-img-box">
+          <img loading="lazy" src="" alt="Preview" id="pv-img" class="diamond-filter">
+        </div>
+        <div class="preview-info">
+          <h3 id="pv-name">Product Name</h3>
+          <p id="pv-story">Story</p>
+          <div class="pv-specs">
+            <div><span class="lbl">Specs</span><span class="val" id="pv-weight">0g</span></div>
+            <div><span class="lbl">Quality</span><span class="val" id="pv-purity">VVS</span></div>
+          </div>
+          <div class="pv-price" id="pv-price">₹0</div>
+        </div>
+      </div>
+
+
+      <!-- Section 9: Customer Stories -->
+      <section class="section-experience">
+        <h2 class="section-title text-center">Echoes of Eternity</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-card">
+            <p class="quote">"My engagement ring is blindingly beautiful. The clarity of the diamond is unlike anything I've ever seen. A true masterpiece."</p>
+            <div class="author">- Priya Sharma</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: The Grand Finale -->
+      <section class="section-finale" id="finale-section">
+        <div class="finale-particles" id="finale-particles"></div>
+        <div class="finale-content">
+          <h2 class="transition-title" style="margin-bottom: 1rem;">Experience Perfection</h2>
+          <p class="hero-desc" style="margin: 0 auto 3rem auto; color: var(--color-diamond);">Or discover the ultimate rarity in our final collection.</p>
+          <a href="platinum.html" class="cta-explore transition-btn" style="text-decoration: none;">DISCOVER PLATINUM COLLECTION</a>
+        </div>
+      </section>
+
+    </div>
+    
+    <script type="module" src="/src/diamond.js"></script>
+    <script src="/src/nav-luxury.js"></script>
+
+    <!-- Floating Luxury CTA -->
+    <a href="index.html#visit" class="floating-luxury-cta" id="floating-cta">
+      <span class="cta-text">Book a Visit</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <script src="/src/floating-cta.js"></script>
+  </body>
+</html>

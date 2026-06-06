@@ -1,0 +1,67 @@
+/* =========================================================================
+   FLOATING LUXURY CTA
+   ========================================================================= */
+
+.floating-luxury-cta {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(200, 163, 85, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #000;
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: var(--font-luxury, 'Cinzel', serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 8000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s, background 0.3s;
+}
+
+.floating-luxury-cta.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.floating-luxury-cta:hover {
+  background: rgba(220, 183, 105, 1);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(200, 163, 85, 0.4);
+}
+
+.floating-luxury-cta svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.floating-luxury-cta:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .floating-luxury-cta {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .floating-luxury-cta {
+    display: none !important;
+  }
+}

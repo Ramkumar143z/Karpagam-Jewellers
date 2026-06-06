@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gold Collection | Karpagam Jewellers</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/gold.css">
+    <link rel="stylesheet" href="/src/nav-luxury.css">
+    <link rel="stylesheet" href="/src/floating-cta.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <!-- Desktop Original Navigation -->
+    <nav class="gold-nav desktop-nav">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+        BACK TO COLLECTIONS
+      </a>
+      <div class="logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+    </nav>
+
+    <!-- Luxury Navigation -->
+    <header class="luxury-top-nav">
+      <a href="index.html" class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></a>
+      <button class="hamburger-menu" aria-label="Open Menu">
+        <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div class="fullscreen-menu-overlay">
+      <div class="menu-content">
+        <div class="menu-header">
+          <div class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+          <button class="close-menu" aria-label="Close Menu">
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="menu-links">
+          <div class="menu-category">COLLECTIONS</div>
+          <a href="gold.html" class="menu-item">Gold</a>
+          <a href="silver.html" class="menu-item">Silver</a>
+          <a href="diamond.html" class="menu-item">Diamond</a>
+          <a href="platinum.html" class="menu-item">Platinum</a>
+          
+          <div class="menu-category" style="margin-top: 2rem;">EXPERIENCE</div>
+          <a href="index.html#masterpieces-app" class="menu-item">Masterpieces</a>
+          <a href="index.html#creation-section" class="menu-item">Craftsmanship</a>
+          <a href="index.html#heritage-section" class="menu-item">Heritage</a>
+          
+          <div class="menu-category" style="margin-top: 2rem;">ASSISTANCE</div>
+          <a href="index.html#contact" class="menu-item">Contact</a>
+          <a href="index.html#visit" class="menu-item">Visit Showroom</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="gold-app">
+      <!-- Section 1: Hero -->
+      <section class="section-hero">
+        <div class="particles" id="hero-particles"></div>
+        <div class="halo-ring"></div>
+        
+        <div class="hero-content">
+          <div class="hero-label">KARPAGAM EXCLUSIVE</div>
+          <h1 class="hero-title">GOLD COLLECTION</h1>
+          <h2 class="hero-subtitle">The Radiance of Tradition</h2>
+          <p class="hero-desc">Crafted for generations. Designed to be treasured forever.</p>
+          <button class="cta-explore" id="explore-btn" onclick="window.scrollBy({top: window.innerHeight, behavior: 'smooth'})">EXPLORE MASTERPIECES</button>
+        </div>
+
+        <div class="hero-centerpiece">
+          <img loading="lazy" src="/assets/collections/gold_hero.png" alt="Gold Necklace Masterpiece" class="hero-necklace">
+        </div>
+
+        <div class="scroll-indicator">
+          <div class="scroll-line"></div>
+          <span>SCROLL</span>
+        </div>
+      </section>
+
+      <!-- Section 2: Story -->
+      <section class="section-story" id="story-section">
+        <div class="story-container">
+          <div class="story-left">
+            <div class="story-image-wrapper">
+              <img loading="lazy" src="/assets/collections/gold_story.png" alt="Legacy of Gold" class="story-img">
+              <div class="temple-pattern"></div>
+            </div>
+          </div>
+          <div class="story-right">
+            <h4 class="story-label">HERITAGE</h4>
+            <h2 class="story-title">The Legacy of Gold</h2>
+            <div class="story-divider"></div>
+            <p class="story-text">For millennia, gold has been more than a metal; it is an emotion, a heritage, a legacy passed down through generations. Our master craftsmen pour their soul into every curve, creating pieces that resonate with the divine radiance of tradition.</p>
+            <p class="story-text">Each masterpiece reflects an unwavering commitment to purity, blending ancient temple architecture motifs with modern elegance.</p>
+            <button class="btn-outline" onclick="window.location.href='index.html#heritage-section'">READ OUR STORY</button>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Section 3: Category Experience -->
+      <section class="section-categories" id="categories-section">
+        <div class="category-header">
+          <h4 class="story-label">CURATED FOR YOU</h4>
+          <h2 class="section-title">The Showroom</h2>
+        </div>
+        
+        <div class="categories-grid">
+          <!-- Necklace -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_necklaces.png" alt="Necklaces" class="cat-img">
+            <div class="cat-content">
+              <h3>Necklaces</h3>
+              <p>Timeless chokers and classics</p>
+            </div>
+          </div>
+          <!-- Harams -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_harams.png" alt="Harams" class="cat-img">
+            <div class="cat-content">
+              <h3>Harams</h3>
+              <p>Long chains of heritage</p>
+            </div>
+          </div>
+          <!-- Earrings -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_earrings.png" alt="Earrings" class="cat-img">
+            <div class="cat-content">
+              <h3>Earrings</h3>
+              <p>Intricate Jhumkas and drops</p>
+            </div>
+          </div>
+          <!-- Bangles -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_bangles.png" alt="Bangles" class="cat-img">
+            <div class="cat-content">
+              <h3>Bangles</h3>
+              <p>Heavy antique carved sets</p>
+            </div>
+          </div>
+          <!-- Rings -->
+          <div class="category-panel">
+            <div class="category-panel-bg"></div>
+            <img loading="lazy" src="/assets/collections/gold_cat_rings.png" alt="Rings" class="cat-img">
+            <div class="cat-content">
+              <h3>Rings</h3>
+              <p>Statement temple rings</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Featured Masterpiece -->
+      <section class="section-masterpiece" id="masterpiece-section">
+        <div class="masterpiece-content">
+          <div class="mp-left">
+            <h4 class="story-label">FEATURED MASTERPIECE</h4>
+            <h2 class="mp-title">The Mahalakshmi Haar</h2>
+            <p class="mp-desc">A singular creation that took over 400 hours of masterful artistry. Encrusted with precious uncut diamonds and deep Burmese rubies, this 22K gold necklace represents the pinnacle of South Indian bridal heritage.</p>
+          </div>
+          
+          <div class="mp-center">
+            <div class="mp-spotlight"></div>
+            <img loading="lazy" src="/assets/collections/gold_masterpiece.png" alt="Masterpiece Necklace" class="mp-img">
+          </div>
+          
+          <div class="mp-right">
+            <div class="specs-list">
+              <div class="spec-item">
+                <span class="spec-val">22K</span>
+                <span class="spec-lbl">Pure Gold</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">916</span>
+                <span class="spec-lbl">Hallmarked</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-val">400h</span>
+                <span class="spec-lbl">Handcrafted</span>
+              </div>
+            </div>
+            <button class="btn-outline" onclick="window.open('https://wa.me/1234567890', '_blank')">INQUIRE PRICE</button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Section 6: Floating Preview Panel -->
+      <div id="preview-panel" class="preview-panel glass">
+        <div class="preview-img-box">
+          <img loading="lazy" src="" alt="Preview" id="pv-img">
+        </div>
+        <div class="preview-info">
+          <h3 id="pv-name">Product Name</h3>
+          <p id="pv-story">Story</p>
+          <div class="pv-specs">
+            <div><span class="lbl">Weight</span><span class="val" id="pv-weight">0g</span></div>
+            <div><span class="lbl">Purity</span><span class="val" id="pv-purity">22K</span></div>
+          </div>
+          <div class="pv-price" id="pv-price">₹0</div>
+        </div>
+      </div>
+
+
+      <!-- Section 9: Customer Experience -->
+      <section class="section-experience">
+        <h2 class="section-title text-center">A Legacy of Trust</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-card">
+            <p class="quote">"The craftsmanship is unparalleled. I wore Karpagam's gold for my wedding, and it felt like I was wearing a piece of history."</p>
+            <div class="author">- Ananya Reddy</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Collection Transition -->
+      <section class="section-transition" id="transition-section">
+        <div class="transition-particles" id="silver-particles"></div>
+        <div class="transition-content">
+          <h2 class="transition-title">The Journey Continues...</h2>
+          <a href="silver.html" class="cta-explore transition-btn" style="text-decoration: none;">DISCOVER SILVER COLLECTION</a>
+        </div>
+      </section>
+
+    </div>
+    
+    <script type="module" src="/src/gold.js"></script>
+    <script src="/src/nav-luxury.js"></script>
+
+    <!-- Floating Luxury CTA -->
+    <a href="index.html#visit" class="floating-luxury-cta" id="floating-cta">
+      <span class="cta-text">Book a Visit</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <script src="/src/floating-cta.js"></script>
+  </body>
+</html>

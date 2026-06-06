@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platinum Collection | Karpagam Jewellers</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600&family=Inter:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/platinum.css">
+  <link rel="stylesheet" href="/src/nav-luxury.css">
+  <link rel="stylesheet" href="/src/floating-cta.css">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Desktop Original Navigation -->
+    <nav class="plat-nav desktop-nav">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+        BACK TO COLLECTIONS
+      </a>
+      <div class="logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+    </nav>
+
+    <!-- Luxury Navigation -->
+  <header class="luxury-top-nav">
+    <a href="index.html" class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></a>
+    <button class="hamburger-menu" aria-label="Open Menu">
+      <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </header>
+
+  <!-- Fullscreen Menu Overlay -->
+  <div class="fullscreen-menu-overlay">
+    <div class="menu-content">
+      <div class="menu-header">
+        <div class="brand-logo"><img src="/webassets/image.png" alt="KARPAGAM" style="height: 60px; width: auto;"></div>
+        <button class="close-menu" aria-label="Close Menu">
+          <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="1.5" fill="none"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="menu-links">
+        <div class="menu-category">COLLECTIONS</div>
+        <a href="gold.html" class="menu-item">Gold</a>
+        <a href="silver.html" class="menu-item">Silver</a>
+        <a href="diamond.html" class="menu-item">Diamond</a>
+        <a href="platinum.html" class="menu-item">Platinum</a>
+        
+        <div class="menu-category" style="margin-top: 2rem;">EXPERIENCE</div>
+        <a href="index.html#masterpieces-app" class="menu-item">Masterpieces</a>
+        <a href="index.html#creation-section" class="menu-item">Craftsmanship</a>
+        <a href="index.html#heritage-section" class="menu-item">Heritage</a>
+        
+        <div class="menu-category" style="margin-top: 2rem;">ASSISTANCE</div>
+        <a href="index.html#contact" class="menu-item">Contact</a>
+        <a href="index.html#visit" class="menu-item">Visit Showroom</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="platinum-app">
+    <!-- Section 1: Hero -->
+    <section class="section-hero">
+      <div class="liquid-bg" id="hero-liquid"></div>
+      <div class="halo-ring"></div>
+
+      <div class="hero-content">
+        <div class="hero-label">KARPAGAM SIGNATURE</div>
+        <h1 class="hero-title">PLATINUM COLLECTION</h1>
+        <h2 class="hero-subtitle">The Rarity of Eternity</h2>
+        <p class="hero-desc">Thirty times rarer than gold. A liquid-metal masterpiece designed for those who seek
+          uncompromised strength and infinite elegance.</p>
+        <button class="cta-explore" id="explore-btn" onclick="window.scrollBy({top: window.innerHeight, behavior: 'smooth'})">Discover the Rarest</button>
+      </div>
+
+      <div class="hero-centerpiece">
+        <img loading="lazy" src="/assets/collections/gold_hero.png" alt="Platinum Masterpiece" class="hero-necklace platinum-filter">
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>DESCEND</span>
+      </div>
+    </section>
+
+    <!-- Section 2: Story -->
+    <section class="section-story" id="story-section">
+      <div class="story-container">
+        <div class="story-left">
+          <div class="story-image-wrapper">
+            <img loading="lazy" src="/assets/collections/gold_story.png" alt="Rarity" class="story-img platinum-filter">
+          </div>
+        </div>
+        <div class="story-right">
+          <h4 class="story-label">PURE STRENGTH</h4>
+          <h2 class="story-title">Forged from the Stars</h2>
+          <div class="story-divider"></div>
+          <p class="story-text">Platinum originated in the cataclysmic collision of neutron stars billions of years ago.
+            It is dense, enduring, and remarkably pure. Unlike other metals, it will never fade or change color over
+            time.</p>
+          <p class="story-text">Its incredible density provides the most secure setting for diamonds, making it the
+            ultimate symbol of true, unbreakable commitments.</p>
+          <button class="btn-outline" onclick="window.location.href='index.html#heritage-section'">READ OUR STORY</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Platinum Categories -->
+    <section class="section-categories" id="categories-section">
+      <div class="category-header">
+        <h4 class="story-label">MINIMALIST ARCHITECTURE</h4>
+        <h2 class="section-title">The Platinum Vault</h2>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Bands -->
+        <div class="category-panel">
+          <div class="category-panel-bg"></div>
+          <img loading="lazy" src="/assets/collections/gold_cat_rings.png" alt="Bands" class="cat-img platinum-filter">
+          <div class="cat-content">
+            <h3>Eternity Bands</h3>
+            <p>Unbroken circles</p>
+          </div>
+        </div>
+        <!-- Bracelets -->
+        <div class="category-panel">
+          <div class="category-panel-bg"></div>
+          <img loading="lazy" src="/assets/collections/gold_cat_bangles.png" alt="Bracelets" class="cat-img platinum-filter">
+          <div class="cat-content">
+            <h3>Liquid Bracelets</h3>
+            <p>Fluid motion</p>
+          </div>
+        </div>
+        <!-- Mens -->
+        <div class="category-panel">
+          <div class="category-panel-bg"></div>
+          <img loading="lazy" src="/assets/collections/gold_cat_necklaces.png" alt="Mens" class="cat-img platinum-filter">
+          <div class="cat-content">
+            <h3>Men's Collection</h3>
+            <p>Subtle strength</p>
+          </div>
+        </div>
+        <!-- Bridal -->
+        <div class="category-panel">
+          <div class="category-panel-bg"></div>
+          <img loading="lazy" src="/assets/collections/gold_masterpiece.png" alt="Bridal Sets" class="cat-img platinum-filter" style="transform: translateX(-50%) scale(0.8);">
+          <div class="cat-content">
+            <h3>Platinum Bridal</h3>
+            <p>Generational legacy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Featured Platinum Masterpiece -->
+    <section class="section-masterpiece" id="masterpiece-section">
+      <div class="masterpiece-content">
+        <div class="mp-left">
+          <h4 class="story-label">ARCHITECTURAL MASTERPIECE</h4>
+          <h2 class="mp-title">The Apex Collar</h2>
+          <p class="mp-desc">A marvel of modern metallurgy. Forged from solid 950 Platinum, its sheer density and sleek,
+            liquid-like finish redefine contemporary high jewelry.</p>
+        </div>
+
+        <div class="mp-center">
+          <div class="mp-spotlight"></div>
+          <img loading="lazy" src="/assets/collections/gold_masterpiece.png" alt="Platinum Masterpiece" class="mp-img platinum-filter">
+        </div>
+
+        <div class="mp-right">
+          <div class="specs-list">
+            <div class="spec-item">
+              <span class="spec-val">PT950</span>
+              <span class="spec-lbl">Metal Purity</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-val">120g</span>
+              <span class="spec-lbl">Solid Weight</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-val">Mirror</span>
+              <span class="spec-lbl">Surface Polish</span>
+            </div>
+          </div>
+          <button class="btn-outline" onclick="window.open('https://wa.me/1234567890', '_blank')">INQUIRE PRICE</button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Section 6: Floating Brushed-Metal Panel -->
+    <div id="preview-panel" class="preview-panel metal-glass">
+      <div class="preview-img-box">
+        <img loading="lazy" src="" alt="Preview" id="pv-img" class="platinum-filter">
+      </div>
+      <div class="preview-info">
+        <h3 id="pv-name">Product Name</h3>
+        <p id="pv-story">Story</p>
+        <div class="pv-specs">
+          <div><span class="lbl">Weight</span><span class="val" id="pv-weight">0g</span></div>
+          <div><span class="lbl">Purity</span><span class="val" id="pv-purity">PT950</span></div>
+        </div>
+        <div class="pv-price" id="pv-price">₹0</div>
+      </div>
+    </div>
+
+
+    <!-- Section 9: Customer Stories -->
+    <section class="section-experience">
+      <h2 class="section-title text-center">Unbreakable Bonds</h2>
+      <div class="testimonial-minimal">
+        <p class="quote-min">"I wanted something that felt substantial, something that wouldn't wear away with time. My
+          platinum band is exactly that. It's heavy, sleek, and perfect."</p>
+        <div class="author-min">- Karthik R.</div>
+      </div>
+    </section>
+
+    <!-- Section 10: The Grand Finale (Eternal Horizon) -->
+    <section class="section-finale" id="finale-section">
+      <div class="horizon-line" id="horizon-line"></div>
+      <div class="finale-content">
+        <h2 class="transition-title" style="margin-bottom: 1rem;">The Eternal Choice</h2>
+        <p class="hero-desc" style="margin: 0 auto 3rem auto; color: var(--color-plat-dark);">Discover the ultimate
+          expression of modern luxury.</p>
+        <a href="#visit" class="cta-explore transition-btn" style="text-decoration: none;">BOOK PRIVATE CONSULTATION</a>
+      </div>
+    </section>
+
+  </div>
+
+  <script type="module" src="/src/platinum.js"></script>
+  <script src="/src/nav-luxury.js"></script>
+
+  <!-- Floating Luxury CTA -->
+  <a href="index.html#visit" class="floating-luxury-cta" id="floating-cta">
+    <span class="cta-text">Book a Visit</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+  <script src="/src/floating-cta.js"></script>
+</body>
+
+</html>
