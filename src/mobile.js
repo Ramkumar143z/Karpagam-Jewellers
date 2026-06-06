@@ -15,19 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // Products
   const productsData = [
     {
-      img: '/assets/signatures/image.png',
+      img: './assets/signatures/image.png',
       title: 'ETERNAL JHUMKAS',
       col: 'Heritage Collection',
       desc: 'Inspired by the rich traditions of temple craftsmanship, celebrating divinity and eternal beauty.'
     },
     {
-      img: '/assets/signatures/image copy 2.png',
+      img: './assets/signatures/image copy 2.png',
       title: 'ROYAL TEMPLE HARAM',
       col: 'Timeless Heritage',
       desc: 'A masterpiece created over 120 hours of intricate craftsmanship using 22K Gold.'
     },
     {
-      img: '/assets/signatures/image copy 4.png',
+      img: './assets/signatures/image copy 4.png',
       title: 'CELESTIAL NECKLACE',
       col: 'Diamond Collection',
       desc: 'The brilliance of perfection, featuring uncut diamonds set flawlessly in pure gold.'
@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Collections
   const collData = [
-    { title: 'GOLD', sub: 'THE RADIANCE OF TRADITION', img: '/assets/collections/gold.png', link: 'gold.html' },
-    { title: 'SILVER', sub: 'THE PURITY OF ELEGANCE', img: '/assets/collections/silver.png', link: 'silver.html' },
-    { title: 'DIAMOND', sub: 'THE BRILLIANCE OF PERFECTION', img: '/assets/collections/diamond.png', link: 'diamond.html' },
-    { title: 'PLATINUM', sub: 'THE RARITY OF ETERNITY', img: '/assets/collections/platinum.png', link: 'platinum.html' }
+    { title: 'GOLD', sub: 'THE RADIANCE OF TRADITION', img: './assets/collections/gold.png', link: 'gold.html' },
+    { title: 'SILVER', sub: 'THE PURITY OF ELEGANCE', img: './assets/collections/silver.png', link: 'silver.html' },
+    { title: 'DIAMOND', sub: 'THE BRILLIANCE OF PERFECTION', img: './assets/collections/diamond.png', link: 'diamond.html' },
+    { title: 'PLATINUM', sub: 'THE RARITY OF ETERNITY', img: './assets/collections/platinum.png', link: 'platinum.html' }
   ];
 
   const collContainer = document.querySelector('.m-coll-items');
