@@ -115,7 +115,7 @@ const homeLink = document.querySelector('.nav-links .nav-link');
 if (homeLink) {
   homeLink.addEventListener('click', (e) => {
     e.preventDefault();
-    const defaultSrc = './assets/image.png';
+    const defaultSrc = '../public/assets/image.png';
     const defaultPrice = '₹2,49,999';
 
     if (activeProduct.getAttribute('src') === defaultSrc) return;
@@ -167,11 +167,11 @@ setTimeout(startSubtleHover, 2000);
 
 // Automatic Hero Image Rotation (7 seconds interval)
 const heroImages = [
-  './assets/signatures/image copy 5.png',
-  './assets/signatures/image copy 2.png',
-  './assets/signatures/image copy 4.png',
-  './assets/signatures/image copy.png',
-  './assets/signatures/ancient_hero_necklace.png'
+  '../public/assets/signatures/image copy 5.png',
+  '../public/assets/signatures/image copy 2.png',
+  '../public/assets/signatures/image copy 4.png',
+  '../public/assets/signatures/image copy.png',
+  '../public/assets/signatures/ancient_hero_necklace.png'
 ];
 let currentHeroIndex = 0;
 

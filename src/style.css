@@ -60,7 +60,7 @@ html {
   border-radius: 0;
   overflow: hidden;
   border: none;
-  background-image: url('./webassets/image copy 3.png');
+  background-image: url('../public/webassets/image copy 3.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
