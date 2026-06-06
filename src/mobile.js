@@ -116,10 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hero Entrance
   const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-  heroTl.from('.m-hero-product', { y: 50, opacity: 0, scale: 0.9, duration: 1.2 })
-        .from('.m-hero-title', { y: 20, opacity: 0, duration: 0.8 }, "-=0.6")
-        .from('.m-hero-sub', { y: 20, opacity: 0, duration: 0.6 }, "-=0.6")
-        .from('.m-hero-cta', { y: 20, opacity: 0, duration: 0.6 }, "-=0.4");
+  heroTl.from('.m-hero-product', { y: 30, opacity: 0, scale: 0.95, duration: 0.6 })
+        .from('.m-hero-title', { y: 15, opacity: 0, duration: 0.4 }, "-=0.4")
+        .from('.m-hero-sub', { y: 15, opacity: 0, duration: 0.4 }, "-=0.3")
+        .from('.m-hero-cta', { y: 15, opacity: 0, duration: 0.4 }, "-=0.3");
 
   // Scroll Animations for Collections
   const collCards = document.querySelectorAll('.m-coll-card');

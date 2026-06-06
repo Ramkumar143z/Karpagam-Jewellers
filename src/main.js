@@ -1,6 +1,12 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Global speedup for mobile/tablet to ensure 1-second load times
+if (window.innerWidth <= 1024) {
+  gsap.globalTimeline.timeScale(2.5);
+}
+
+
 // Prevent FOUC by making body visible after GSAP is ready
 gsap.set('body', { visibility: 'visible' });
 
