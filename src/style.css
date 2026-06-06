@@ -459,14 +459,14 @@ html {
 .feature-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   width: max-content;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   background: rgba(255, 255, 255, 0.03);
   /* Lighter, more transparent background */
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -475,8 +475,8 @@ html {
   /* Faded bottom edge */
   border-right-color: rgba(255, 255, 255, 0.05);
   /* Faded right edge */
-  padding: 4px 8px;
-  border-radius: 10px;
+  padding: 2px 5px;
+  border-radius: 6px;
   backdrop-filter: blur(20px);
   /* Increased blur */
   -webkit-backdrop-filter: blur(20px);
@@ -485,8 +485,8 @@ html {
 }
 
 .feature-icon {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   color: #a8d5d1;
   /* light teal */
   display: flex;
@@ -495,14 +495,14 @@ html {
 }
 
 .feature-text h4 {
-  font-size: 0.45rem;
+  font-size: 0.35rem;
   color: #a8d5d1;
   letter-spacing: 0.05em;
   margin-bottom: 2px;
 }
 
 .feature-text p {
-  font-size: 0.4rem;
+  font-size: 0.3rem;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.2;
 }
