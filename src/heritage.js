@@ -1,8 +1,6 @@
 /* =========================================================================
    HERITAGE & LEGACY SECTIONS - GSAP ANIMATIONS
    ========================================================================= */
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 

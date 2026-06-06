@@ -1,8 +1,6 @@
 /* =========================================================================
    THE ART OF CREATION - GSAP ANIMATIONS
    ========================================================================= */
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
