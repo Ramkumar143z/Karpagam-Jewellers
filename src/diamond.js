@@ -58,17 +58,6 @@ window.addEventListener('load', () => {
     '-=0.5'
   );
 
-  // Floating & Rotating animation for diamond masterpiece
-  gsap.to('.hero-necklace', {
-    y: '-=20',
-    rotationY: '+=5',
-    rotationX: '+=2',
-    duration: 5,
-    yoyo: true,
-    repeat: -1,
-    ease: 'sine.inOut'
-  });
-
   // Story Section
   const storyTl = gsap.timeline({
     scrollTrigger: {

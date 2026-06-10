@@ -58,15 +58,6 @@ window.addEventListener('load', () => {
     '-=0.2'
   );
 
-  // Floating animation for platinum masterpiece
-  gsap.to('.hero-necklace', {
-    y: '-=15',
-    duration: 4,
-    yoyo: true,
-    repeat: -1,
-    ease: 'sine.inOut'
-  });
-
   // Story Section
   const storyTl = gsap.timeline({ scrollTrigger: { trigger: '.section-story', start: 'top 65%', toggleActions: 'play none none reverse' } });
   storyTl.fromTo('.story-img', { filter: 'grayscale(100%) brightness(0)', opacity: 0 }, { filter: 'grayscale(100%) brightness(1.2)', opacity: 1, duration: 2, ease: 'power2.out' })

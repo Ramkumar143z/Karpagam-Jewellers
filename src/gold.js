@@ -47,11 +47,7 @@ window.addEventListener('load', () => {
     { scale: 0, opacity: 0 }, 
     { scale: 1, opacity: 1, duration: 2, ease: 'power3.out' }
   )
-  .fromTo('.hero-necklace',
-    { y: 100, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1.5, ease: 'power3.out' },
-    '-=1.5'
-  )
+  
   .fromTo('.hero-label',
     { y: 20, opacity: 0 },
     { y: 0, opacity: 1, duration: 0.8 },
@@ -81,15 +77,6 @@ window.addEventListener('load', () => {
     { opacity: 0 },
     { opacity: 1, duration: 1 }
   );
-
-  // Floating animation for necklace
-  gsap.to('.hero-necklace', {
-    y: '-=20',
-    duration: 3,
-    yoyo: true,
-    repeat: -1,
-    ease: 'sine.inOut'
-  });
 
   // Story Section ScrollTrigger
   const storyTl = gsap.timeline({

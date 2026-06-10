@@ -33,11 +33,7 @@ window.addEventListener('load', () => {
     { opacity: 0.8, duration: 2, ease: 'power2.inOut' },
     '-=2'
   )
-  .fromTo('.hero-necklace',
-    { y: 50, opacity: 0, scale: 0.95 },
-    { y: 0, opacity: 1, scale: 1, duration: 2, ease: 'power3.out' },
-    '-=1.5'
-  )
+
   .fromTo('.hero-label',
     { y: 20, opacity: 0 },
     { y: 0, opacity: 1, duration: 1 },
@@ -69,15 +65,7 @@ window.addEventListener('load', () => {
     '-=0.5'
   );
 
-  // Floating animation for silver masterpiece
-  gsap.to('.hero-necklace', {
-    y: '-=15',
-    rotationZ: '+=1',
-    duration: 4,
-    yoyo: true,
-    repeat: -1,
-    ease: 'sine.inOut'
-  });
+
 
   // Story Section ScrollTrigger
   const storyTl = gsap.timeline({
